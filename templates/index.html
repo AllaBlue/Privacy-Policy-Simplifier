@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Check Links - Be Smart, Be Safe</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 50px;
+            text-align: center;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        input[type="text"] {
+            width: 80%;
+            padding: 15px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="text"]:focus {
+            border-color: #4CAF50;
+        }
+
+        span {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <label for="urlInput">Check links to prevent Cyber Attacks - Be <span>Smart</span>, Be
+            <span>Safe</span>.</label>
+        <input type="text" id="urlInput" placeholder="Enter URL to check">
+        <br><br>
+        <button id="secureButton">Secure Myself</button>
+    </div>
+
+    <script>
+        document.getElementById('secureButton').addEventListener('click', function () {
+            var url = document.getElementById('urlInput').value;
+            // Redirect to /scan-form with the URL as a query parameter
+            window.location.href = `/scan-form?url=${url}`;
+        });
+    </script>
+</body>
+
+</html>
